@@ -1,0 +1,105 @@
+<!--packageB/pages/launched/launched.wxml-->
+<!-- <text>packageB/pages/launched/launched.wxml</text> -->
+<view class="instructionsX" style="border: none;">
+<my-view3 bind:getChoice="getChoice" ></my-view3>
+</view>
+
+<!-- <view style="height: 180rpx;"></view> -->
+<view class="container-back">
+
+<view wx:if="{{(choice==0&&awitStateList.length==0)||(choice==1&&messageList.length==0)}}" class="container">
+暂时没有数据哦~~~
+</view>
+
+<!-- test -->
+<van-popup 
+show="{{ showDetail }}" 
+bind:close="onClose"
+custom-style="height: 60%;width:90%"
+wx:if="{{detailIndex!=null}}"
+round
+lock-scroll="{{true}}"
+>
+<block >
+
+<view class="detailimage" >
+<!-- <image src="http://noaipt.com/uploads/test/2022-0504-62727490d47d5.gif"  ></image> -->
+ <!-- <image 
+ mode="aspectFill" 
+ show-menu-by-longpress
+ src="{{'http://noaipt.com/uploads/product/'+checkDetailItem.imgArr[0]}}"></image> -->
+ <swiper
+ indicator-dots
+ autoplay
+ interval="2000"
+ circular
+ >
+<swiper-item wx:for="{{checkDetailItem.imgArr}}" wx:key="index">
+  <image
+  mode="aspectFit"
+  show-menu-by-longpress 
+  src="{{'http://noaipt.com/uploads/product/'+item}}"  ></image>
+</swiper-item>
+</swiper>
+
+</view>
+<view id="detailPup">
+  <text class="shop-name">产品名：{{checkDetailItem.name}}</text>
+  <text>投放地区:{{checkDetailItem.areaAddress}}{{checkDetailItem.areaName}}</text>
+  <text>价格:{{checkDetailItem.price}}元/公斤</text>
+  <text>申请时间:{{checkDetailItem.sqtime}}</text>
+  <text wx:if="{{choice!=0}}">上线时间:{{checkDetailItem.putondate}}</text>
+  <text wx:if="{{checkDetailItem.state==0}}" style="font-weight: bold;" style="color: red;">审核未通过！请检查产品信息后重新申请</text>
+  <text wx:if="{{checkDetailItem.state==1}}" style="font-weight: bold;" style="color: green;">审核已通过！</text>
+<view>  
+<button wx:if="{{checkDetailItem.state==1}}" bindtap="pay" type="primary" >点击付款</button>
+</view>
+
+  <text wx:if="{{checkDetailItem.state==2}}" style="font-weight: bold;">审核中，请耐心等待...</text>
+</view>
+
+
+</block>
+</van-popup>
+
+<block >
+<!--class="shop-item"  -->
+<view  
+wx:for="{{choice==1?messageList:waitStateList}}" 
+wx:key="index"   
+class="{{item.mediaType=='video'?'shop-item-video':'shop-item'}}" 
+>
+<view class="image-src" >
+<image 
+binderror="imgPathErr"
+wx:if="{{item.mediaType!='video'}}"
+bindtap="checkDetail" data-index="{{index}}" 
+src="{{'http://noaipt.com/uploads/product/'+item.imgArr[0]}}"  >
+</image>
+<video 
+wx:if="{{item.mediaType=='video'}}"
+object-fit="fill"
+direction="0"
+binderror="videoPathErr"
+src="{{'http://noaipt.com/uploads/product/'+item.imgArr[0]}}">
+ </video>
+</view>
+<view class="info" >
+  <text class="shop-name">产品名：{{item.name}}</text>
+  <text>投放地区:{{item.areaAddress}}{{item.areaName}}</text>
+  <text>价格:{{item.price}}元/公斤</text>
+  <text>申请时间:{{item.sqtime}}</text>
+  <text wx:if="{{choice!=0}}">上线时间:{{item.putondate}}</text>
+  <text wx:if="{{item.state==0}}" style="font-weight: bold;" style="color: red;">审核未通过！请检查产品信息后重新申请</text>
+  <text wx:if="{{item.state==1}}" style="font-weight: bold;" style="color: green;">审核已通过！</text>
+<view>  
+<button wx:if="{{item.state==1}}" catchtap="pay" data-query="{{item}}" type="primary" size="mini">点击付款</button>
+</view>
+
+  <text wx:if="{{item.state==2}}" style="font-weight: bold;" style="color: #2eceff;">审核中，请耐心等待...</text>
+ 
+</view>
+
+</view>
+</block>
+</view>

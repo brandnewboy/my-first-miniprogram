@@ -1,0 +1,55 @@
+<view id="content">
+<view class="head-icon">
+  <van-icon 
+  name="user-circle-o" 
+  size="200rpx" 
+  color="rgb(0, 115, 119);"
+  />
+</view>
+  
+<view class="inputfield">
+  <van-cell-group>
+  <van-field
+  model:value="{{ username }}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    left-icon="user-circle-o"
+    custom-style="margin-bottom:20rpx;border-radius: 10rpx;width:500rpx"
+  />
+  <van-field
+  model:value="{{ phoneNumber }}"
+    placeholder="请输入电话号码"
+    border="{{ false }}"
+    left-icon="phone-o"
+    custom-style="margin-bottom:20rpx;border-radius: 10rpx;width:500rpx"
+  />
+  <van-field
+  model:value="{{ email }}"
+    placeholder="请输入邮箱号码"
+    border="{{ false }}"
+    left-icon="envelop-o"
+    custom-style="margin-bottom:20rpx;border-radius: 10rpx;width:500rpx"
+  />
+  <van-field
+  model:value="{{ password }}"
+    password
+    placeholder="请输入密码"
+    border="{{ false }}"
+    left-icon="info-o"
+    custom-style="margin-bottom:20rpx;border-radius: 10rpx;width:500rpx"
+  />
+  <van-field
+  model:value="{{ password_2 }}"
+    password
+    placeholder="确认密码"
+    border="{{ false }}"
+    left-icon="info-o"
+    error-message="{{password_2==password?'':'两次输入密码不一致'}}"
+    custom-style="margin-bottom:20rpx;border-radius: 10rpx;width:500rpx"
+  />
+</van-cell-group>
+<button type="primary" style="width: 600rpx;margin-top: 100rpx;">提交注册</button>
+</view>
+
+<!-- end -->
+</view>

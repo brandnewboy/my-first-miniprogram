@@ -1,0 +1,9 @@
+<!--component/view1/view1.wxml-->
+<view class="tabs">
+  <view class="tabs3" style="background-color:{{color_tabs3}}; color: {{color_txt3}};"
+bindtap="choose3">默认排序</view>
+<view class="tabs1" style="background-color:{{color_tabs1}}; color: {{color_txt1}};"
+bindtap="choose1">按下单日期</view>
+<view class="tabs2" style="background-color: {{color_tabs2}}; color:{{color_txt2}}"
+bindtap="choose2">按金额</view>
+</view>

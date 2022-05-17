@@ -1,0 +1,12 @@
+<!--packageB/pages/payover/payover.wxml-->
+<!-- <text>packageB/pages/payover/payover.wxml</text> -->
+<view class="header">
+  <icon type="success"></icon><text>支付成功</text>
+</view>
+<view class="container">
+  <view class="paycontent">
+<text>农投平台商户</text>
+<text class="money">¥{{money}}</text>
+</view>
+</view>
+<button class="footbtn" type="primary" 	plain bindtap="back">返回平台</button>

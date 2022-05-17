@@ -1,0 +1,28 @@
+<!--component/view2/view2.wxml-->
+<view class="reminder">
+<view class="reminder1">图片/视频上传</view>
+<view class="reminder2">{{(fileList.length)}}/6</view>
+</view>
+<view class="images"> <!-- 用于承载上传的视频图片略缩图的区域 -->
+
+
+<!-- 单个承载的容器，wx:for列表渲染出来 -->
+<view wx:for="{{fileList}}" wx:key="index" class="container1">
+<!-- 用于删除的图标，置于右上角 -->
+<van-icon wx:if="{{van_icon}}" name="close" class="delete-icon" bind:click="remove" data-val="{{item.tempFilePath}}"
+ data-index="{{index}}" />
+<!-- 图片 -->
+<image  bindtap="previewimgs" data-info="{{index}}" data-type="{{item.fileType}}"
+data-thumbimg="{{item.thumbTempFilePath}}" 
+src="{{item.fileType=='video'?item.thumbTempFilePath:item.tempFilePath}}" class="ims"></image>
+</view>
+
+<!-- 承载上传图标的组件 -->
+<view  class="container2">
+  <van-icon wx:if="{{van_icon_uoload}}" name="photograph" size="110rpx" class="photograph" bind:click="btn" />
+</view>
+
+</view>
+<!-- <button type="primary" size="mini" bindtap="btn">+点击上传图片</button> -->
+
+

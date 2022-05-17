@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "custom-tab":"/custom-tab-bar/index",
+    
+    "my-view4":"/components/view4/view4"
+  },
+  "navigationBarTitleText": "我的订单"
+}

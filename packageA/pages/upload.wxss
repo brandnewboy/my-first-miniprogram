@@ -1,0 +1,56 @@
+/* packageA/pages/upload.wxss */
+
+.txt-1{
+  margin-top: 60rpx;
+  margin-left: 73rpx;
+  width: 600rpx;
+  height: 300rpx;
+  border:2rpx solid #1768F4;
+  border-radius: 10rpx;
+  /* border-radius: 18rpx; */
+}
+
+.picker1{
+  margin-left: 71rpx;
+  margin-top: 35rpx;
+  width: 600rpx;
+  border: 4rpx solid #efefef;
+  height: 60rpx;
+}
+.picker2{
+  display: flex;
+  margin-left: 71rpx;
+  margin-top: 35rpx;
+  margin-bottom: 35rpx;
+  width: 600rpx;
+  border: 4rpx solid #efefef;
+  height: 60rpx;
+}
+
+.instructions{
+  color: white;
+  height: 60rpx;
+  text-align: center;
+  background-color: #60BCD9;
+}
+.message1{
+  margin-top: 35rpx;
+  margin-left: 73rpx;
+}
+.message2{
+  margin-top: 35rpx;
+  margin-left: 73rpx;
+  width: 600rpx;
+  height: 300rpx;
+  border:4rpx solid #efefef;
+  border-radius: 15rpx;
+}
+.submit{
+  text-align: center;
+  height: 80rpx;
+  /* width: 100%; */
+  margin: 50rpx;
+  /* position: fixed;
+  bottom: 0rpx; */
+  background-color: #60BCD9;
+}

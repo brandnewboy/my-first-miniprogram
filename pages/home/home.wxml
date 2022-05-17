@@ -1,0 +1,59 @@
+<!--pages/home/home.wxml-->
+<!-- <text>这是首页</text> -->
+<!-- 顶部需要渲染平台提供的轮播图 -->
+<view class="header">
+<swiper class="slideshow" autoplay interval="2000" circular="true"
+indicator-dots indicator-color="white" indicator-active-color="#efefef">
+
+<swiper-item wx:for="{{swiperList}}" wx:key="index">
+<image src="{{item.image}}"></image>
+</swiper-item>
+<swiper-item>
+<image src="../../image/swiper1.jpg"></image>
+</swiper-item>
+<swiper-item>
+<image src="../../image/swiper2.jpg"></image>
+</swiper-item>
+</swiper>
+
+<!-- 轮播图下方显示两个选择按钮 -->
+
+<view class="buttons">
+  <navigator class="uploading" url="/packageA/pages/upload">
+  <text class="txt-1">我要投放</text>
+  </navigator>
+
+  <navigator class="manager" url="/packageB/pages/launched/launched">
+  <text class="txt-2">我的产品</text>
+  </navigator>
+</view>
+<!-- header -->
+</view>
+
+<view class="instruction-col" class="{{scrollTop>280?'psticky':'instruction-col'}}">
+<text id="timemove">我的投放动态</text>
+</view>
+
+<!-- 我的投放动态 -->
+<view class="instruction-content">
+<view wx:if="{{messageList.length==0}}" class="container">
+您还没有过期产品哦~~~
+</view>
+
+<view class="shop-item" wx:for="{{messageList}}" wx:key="index">
+
+<view class="image-src">
+<image binderror="imgPathErr" src="{{'http://noaipt.com/uploads/product/'+item.imgArr[0]}}" ></image>
+<!-- <image src="../../image/模拟头像.jpeg"></image> -->
+</view>
+<view class="info">
+  <text class="shop-name">{{item.name}}</text>
+  <text>投放地区:{{item.areaName}}{{item.areaAddress}}</text>
+  <text>价格:{{item.price}}元/公斤</text>
+  <text>上线时间时间:{{item.putondate}}</text>
+  <text>投放结束时间:{{item.deadline}}</text>
+  <text style="font-weight: bold;">该产品投放时间已结束，已为您下线</text>
+</view>
+</view>
+
+</view>

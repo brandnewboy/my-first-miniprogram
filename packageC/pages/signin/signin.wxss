@@ -1,0 +1,18 @@
+/* packageC/pages/signin/signin.wxss */
+#content{
+  height: 100vh;
+  background: linear-gradient(to bottom,#B0C4DE,#e9cbdd);
+}
+.head-icon{
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+}
+.inputfield{
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

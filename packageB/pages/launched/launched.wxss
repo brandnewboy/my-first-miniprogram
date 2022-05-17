@@ -1,0 +1,102 @@
+/* packageB/pages/launched/launched.wxss */
+page{
+  background:radial-gradient(rgb(168, 255, 248),  #e9cbdd);
+  z-index: 1;
+}
+/* .container-back{
+  height: 300%;
+  background:linear-gradient(to bottom,rgb(169, 255, 169),#e9cbdd);
+} */
+.instructionsX{
+  background-color: #B0C4DE;
+  width: 100%;
+  position: sticky;
+  top: 0rpx; 
+  z-index:999
+}
+.instructions1{
+  
+  background-color: #81D5BB;
+  height: 60rpx;
+  font-style: oblique;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instructions2{
+  
+  /* margin-top: 50rpx; */
+  background-color: #81D5BB;
+  height: 100rpx;
+  font-style: oblique;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-item{
+  display: flex;
+  padding: 15rpx;
+  /* margin: 50rpx; */
+  margin-bottom: 30rpx;
+  box-shadow: 1rpx 1rpx 10rpx #69D5B8;
+  border-radius: 30rpx;
+}
+.shop-item-video{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx;
+  /* margin: 50rpx; */
+  margin-bottom: 30rpx;
+  box-shadow: 1rpx 1rpx 10rpx #69D5B8;
+  border-radius: 30rpx;
+}
+
+.image-src image{
+  margin-right: 15rpx;
+  border: 2rpx solid #efefef;
+  border-radius: 15rpx;
+  width: 250rpx;
+  height: 250rpx;
+}
+.info{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 24rpx;
+}
+.info text {
+  line-height: 40rpx;
+}
+.info button{
+  position:sticky;
+  right: 0;
+}
+.shop-name{
+  font-weight: bold;
+}
+#detailPup{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+#detailPup text{
+line-height: 65rpx;
+}
+#detailPup button{
+  position: fixed;
+  bottom: 20rpx;
+  right: 30rpx;
+}
+.detailimage{
+  border-radius: 5rpx;
+  margin: 20rpx;
+  height: auto;
+  width: auto;
+}
+.detailimage image{
+  border-radius: 5rpx;
+}

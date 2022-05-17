@@ -1,0 +1,27 @@
+/* packageB/pages/payover/payover.wxss */
+.header{
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  color: green;
+}
+.header text{
+  margin-left: 10rpx;
+}
+.paycontent{
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paycontent text:nth-child(1){
+  font-size:medium;
+}
+.money {
+  margin-top: 10rpx;
+  font-size: 80rpx;
+}
+.footbtn{
+  width: 400rpx;
+}

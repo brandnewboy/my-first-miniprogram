@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "my-view3":"/components/view3/view3",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index"
+  },
+  "navigationBarTitleText": "管理我的产品",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,31 @@
+<view class="content">
+<view class="container1">
+
+<view class="head">
+<van-icon wx:if="{{!beAdmitted}}" size="60rpx" name="manager" />
+<image wx:if="{{beAdmitted}}" src="{{avatarImage}}"></image>
+<view class="headtextbox">
+<text class="nickname">{{nickname}}</text>
+<text class="headhint">{{beAdmitted?idNumber:'点击下方登录按钮登录'}}</text>
+</view>
+</view>
+
+<view class="body">
+<text>平台简介</text>
+<my-line></my-line>
+<text>账号与密码</text>
+<my-line></my-line>
+<text>建议与反馈</text>
+<my-line></my-line>
+<text>当前版本:1.0</text>
+</view>
+
+<view wx:if="{{!beAdmitted}}" class="foot">
+<button type="primary" bindtap="gotoLogin">登录</button>
+<button type="default" bindtap="alert">忘记密码</button>
+</view>
+<button wx:if="{{beAdmitted}}" type="warn" style="margin-top: 20rpx;" bindtap="quitLogoin">退出登录</button>
+
+</view>
+
+</view>

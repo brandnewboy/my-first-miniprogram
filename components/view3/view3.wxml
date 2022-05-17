@@ -1,0 +1,7 @@
+<!--component/view1/view1.wxml-->
+<view class="tabs">
+<view class="tabs1" style="background-color:{{color_tabs1}}; color: {{color_txt1}};"
+bindtap="choose1">已上线</view>
+<view class="tabs2" style="background-color: {{color_tabs2}}; color:{{color_txt2}}"
+bindtap="choose2">审核中</view>
+</view>

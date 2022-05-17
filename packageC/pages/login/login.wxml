@@ -1,0 +1,44 @@
+<!--packageC/pages/logoin/logoin.wxml-->
+<!-- <text>packageC/pages/logoin/logoin.wxml</text> -->
+<view class="content">
+<view class="container1">
+  <van-icon 
+  name="user-circle-o" 
+  size="200rpx" 
+  color="rgb(0, 115, 119);"
+  />
+<view><text style="font-size: 60rpx;color: rgb(0, 115, 119);">登录</text></view>
+</view>
+
+<view class="container2">
+<!-- <input type="text" placeholder="请输入昵称" bindinput="inputnickname" value="test" />
+<input  password="true" placeholder="请输入密码"  bindinput="inputpassword" value="test" /> -->
+<van-cell-group>
+  <van-field
+  model:value="{{ username }}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    bind:change="onChangeUsername"
+    left-icon="user-circle-o"
+    custom-style="margin-bottom:20rpx;border-radius: 10rpx;width:500rpx"
+  />
+  <van-field
+  model:value="{{ password }}"
+    password
+    placeholder="请输入密码"
+    border="{{ false }}"
+    bind:change="onChangePassword"
+    left-icon="info-o"
+    custom-style="margin-bottom:20rpx;border-radius: 10rpx;width:500rpx"
+  />
+</van-cell-group>
+
+</view>
+<button class="loginbtn" type="primary" bindtap="login">登录</button>
+<view id="footer">
+<text>还没有账号？</text>
+<text bindtap="gotoSignIn">去注册</text>
+</view>
+
+<!-- end -->
+</view>

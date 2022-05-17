@@ -1,0 +1,32 @@
+
+<!-- <view class="head-search"> -->
+<!-- 顶部搜索框 -->
+<!-- <input placeholder="搜索我的订单" type="text"/> -->
+<!-- <van-search value="{{ value }}" placeholder="请输入搜索关键词" /> -->
+<!-- 分类选择 -->
+<!-- <my-view4></my-view4> -->
+<!-- </view> -->
+
+<!-- 渲染内容 -->
+<view class="content">
+
+<view class="container" wx:if="{{products.length==0}}" >
+暂无数据~~~
+</view>
+
+<view class="container1">
+<view class="item"  wx:for="{{products}}" wx:key="index">
+<image src="{{'http://noaipt.com/uploads/product/'+item.imgArr[0]}}"></image>
+<view class="textbox">
+<text>产品名：{{item.name}}</text>
+<!-- <text>付款日期：{{item.paydate}}</text> -->
+<text>订单编号：{{item.id}}</text>
+<text>付款金额：¥{{item.money}}</text>
+</view>
+
+</view>
+
+</view>
+
+
+</view>

@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/userfile/userfile",
+    "pages/home/home",
+    "pages/index/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "div-line": "/components/div-line/div-line"
+  },
+  "subPackages": [
+    {
+      "root": "packageA",
+      "name": "packA",
+      "pages": [
+        "pages/upload"
+      ]
+    },
+    {
+      "root": "packageB",
+      "name": "packB",
+      "pages": [
+        "pages/launched/launched",
+        "pages/auditing/auditing",
+        "pages/pay/pay",
+        "pages/payover/payover"
+      ]
+    },
+    {
+      "root": "packageC",
+      "name": "packC",
+      "pages": [
+        "pages/signin/signin",
+        "pages/login/login",
+        "pages/findpw/findpw"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "农投农产品推广平台",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#B0C4DE"
+    
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/userfile/userfile",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

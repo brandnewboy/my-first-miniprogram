@@ -1,0 +1,4 @@
+<!--components/div-line/div-line.wxml-->
+<view >
+<view class="divLine"></view>
+</view>

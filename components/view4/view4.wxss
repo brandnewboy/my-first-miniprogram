@@ -1,0 +1,38 @@
+/* component/view1/view1.wxss */
+.tabs{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  height: 60rpx;
+  border: 2rpx solid #13A7A0;
+}
+.tabs1{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  text-align:center;
+  /* text-align: justify; */
+  align-items: center;
+  justify-content: center;
+  /* line-height: 60rpx; */
+}
+.tabs2{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  text-align:center;
+  /* text-align: justify; */
+  align-items: center;
+  justify-content: center;
+  /* line-height: 60rpx; */
+}
+.tabs3{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  text-align:center;
+  /* text-align: justify; */
+  align-items: center;
+  justify-content: center;
+  /* line-height: 60rpx; */
+}

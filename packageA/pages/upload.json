@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "my-view1":"/components/view1/view1",
+    "my-view2":"/components/view2/view2"
+    
+  },
+  "navigationBarTitleText": "我要投放"
+}

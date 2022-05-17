@@ -1,0 +1,38 @@
+/* component/view2/view2.wxss */
+.images{
+  border: 4rpx solid #efefef;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ims{
+  width: 220rpx;
+  height: 220rpx;
+}
+.container1{
+  width: 222rpx;
+  height: 222rpx;
+  border: 2rpx solid #efefef;
+  margin: 5rpx;
+  position: relative;
+}
+.delete-icon{
+  position: absolute;
+  right: 2px;
+  color: rgb(243, 33, 33);
+}
+.container2{
+  width: 222rpx;
+  height: 222rpx;
+  border: 2rpx solid #efefef;
+  margin: 5rpx;
+}
+.photograph{
+  margin: 50rpx;
+}
+.reminder{
+  display: flex;
+}
+.reminder2{
+  /* position: fixed; */
+  margin-left: 450rpx;
+}

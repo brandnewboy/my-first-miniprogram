@@ -1,0 +1,41 @@
+<!--packageB/pages/pay/pay.wxml-->
+<!-- <text>packageB/pages/pay/pay.wxml</text> -->
+<view class="container1">
+<view class="head">
+<text>农投订单-202205080000006659</text>
+<text class="money">¥{{money}}</text>
+</view>
+
+<view class="info">
+<text class="info-1">收款方</text>
+<text class="info-2">农投商户平台</text>
+</view>
+<van-popup 
+show="{{ showPop }}"
+position="bottom"
+bind:close="onClose"
+closeable
+custom-style="height: 75%;width:750rpx;padding:20rpx"
+ >
+<text class="title">请输入支付密码</text>
+<view class="paycontent">
+<text>付款给企业微信</text>
+<text class="money">¥{{money}}</text>
+</view>
+<!-- <van-divider customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;">
+</van-divider> -->
+<van-divider></van-divider>
+
+<view class="nextinfo">
+<text>支付方式</text>
+<text>零钱</text>
+
+</view>
+<!-- <pay-input class="myinput" bind:payOver="overEvent"></pay-input> -->
+<!-- <input></input> -->
+ </van-popup>
+<button size="default" type="primary" bindtap="overEvent">立即支付</button>
+
+
+
+</view>

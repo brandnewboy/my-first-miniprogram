@@ -1,0 +1,11 @@
+<!--custom-tab-bar/index.wxml-->
+<!-- <text>custom-tab-bar/index.wxml</text> -->
+<van-tabbar 
+active="{{ active }}" 
+active-color="#13a7a0"
+inactive-color="#000"
+bind:change="onChange">
+  <van-tabbar-item icon="wap-home">首页</van-tabbar-item>
+  <van-tabbar-item icon="balance-list" info="{{list[1].info?list[1].info:''}}">订单</van-tabbar-item>
+  <van-tabbar-item icon="manager"> 我的</van-tabbar-item>
+</van-tabbar>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    
+    "my-line":"/components/div-line/div-line"
+  },
+  "navigationBarTitleText": "我的"
+}
